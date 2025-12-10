@@ -128,4 +128,65 @@ html {
         background-color: #6411b3;
         }
 
+/* ======================
+  Ajustes de acessibilidade, validação e responsividade
+   - Adicionei .err, #status, .active, foco e media queries
+   ====================== */
+
+/* Reset mínimo para body, garantindo espaçamento consistente) */
+body {
+  margin: 0;
+  padding: 0 12px;
+}
+
+/* Melhor comportamento do menu: flexbox */
+nav ul {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Removendo float (antigo) */
+nav ul li { float: none; }
+
+/* Mensagens de erro / validação geradas pelo JS */
+.err, .field-error {
+  color: #b00020;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* Mensagem de status geral (enviando / sucesso) */
+#status, #status-message {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: #264653;
+}
+
+/* Pequeno ajuste no botão desabilitado */
+form button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsividade simples: menu vertical em telas pequenas */
+@media (max-width: 640px) {
+  nav ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .col-6, .col-4, .col-12 {
+    width: 100% !important; /* simplifica grelha para mobile */
+  }
+
+  form {
+    padding: 18px;
+    margin: 0 12px;
+  }
+}
+
+
 
