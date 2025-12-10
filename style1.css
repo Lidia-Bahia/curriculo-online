@@ -1,0 +1,190 @@
+/* Alterando estilo do site */
+* {
+            box-sizing: border-box;
+        }
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+    background-color: #d9d7f8;
+    }
+
+/* seleção de texto */
+::selection { /*estiliza a seleção de texto!*/
+            color: white;
+            background: #7e14e2;
+        }
+
+/* Para blocos de texto */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}    
+
+.text {
+     background-color: #fff;
+     padding: 15px;
+     color: #6411b3;
+     text-align: justify;
+     font-size: 14px;
+     border-radius: 8px;
+}
+
+/* Títulos */
+.th1{
+      color:#7e14e2;
+      text-align: center;
+      justify-content: center;
+}
+
+         
+/*estilizando a barra de navegação*/
+ .div1 {
+    display: flex;
+    justify-content: center;
+ } /* centralizando a barra de navegação */
+
+ /* navegação */
+        nav {
+            width: auto;
+            margin: 0;
+            padding: 10px;
+            }
+ 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        li {float: left;} /*deixa o menu na horizontal*/
+
+        li a:hover {
+            background-color: #7e14e2;
+            color: #fff;
+        }
+
+        ul li a {
+            display: block;
+            text-decoration: none;
+            color: #7e14e2;
+            background: #fff;
+            margin: 0;
+            padding: 5px;
+            border-radius: 8px;
+            }
+
+        /* Estilizando o formulário */
+
+        form {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Labels (Nome, Email, etc) */
+        form label {
+        font-weight: bold;
+        font-size: 14px;
+        }
+
+        /* Inputs e textarea */
+        form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        transition: 0.3s;
+        }
+
+       /* Botão */
+        form button {
+        background-color: #7e14e2;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 15px;
+        margin-top: 10px;
+        transition: 0.3s;
+        }
+
+        /* Hover do botão */
+        form button:hover {
+        background-color: #6411b3;
+        }
+
+/* ======================
+  Ajustes de acessibilidade, validação e responsividade
+   - Adicionei .err, #status, .active, foco e media queries
+   ====================== */
+
+/* Reset mínimo para body, garantindo espaçamento consistente) */
+body {
+  margin: 0;
+  padding: 0 12px;
+}
+
+/* Melhor comportamento do menu: flexbox */
+nav ul {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Removendo float (antigo) */
+nav ul li { float: none; }
+
+/* Mensagens de erro / validação geradas pelo JS */
+.err, .field-error {
+  color: #b00020;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* Mensagem de status geral (enviando / sucesso) */
+#status, #status-message {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: #7e14e2;
+}
+
+
+/* Responsividade simples: menu vertical em telas pequenas */
+@media (max-width: 640px) {
+  nav ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .col-6, .col-4, .col-12 {
+    width: 100% !important; /* simplifica grelha para mobile */
+  }
+
+  form {
+    padding: 18px;
+    margin: 0 12px;
+  }
+}
+
+
+
+
+
+
